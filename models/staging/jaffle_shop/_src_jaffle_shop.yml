@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: "{{env_var('DBT_SRC_CATALOG')}}"
+    schema: raw
+    tables:
+      - name: customers
+        description: ""
+        columns:
+        - name : id
+          data_tests:
+            - not_null
+            - unique
+      - name: orders
+        description: ""
+        columns:
+        - name : id
+          data_tests:
+            - not_null
+            - unique
+      - name: stripe_payments
+        description: ""
