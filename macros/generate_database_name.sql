@@ -4,11 +4,11 @@
     {%- set curr_env = env_var("DBT_ENV_NAME") -%}
     {%- if custom_database_name is none -%}
 
-        {{ default_database }}_{{ curr_env }}
+        {{ default_database }}_{{ curr_env |lower}}
 
     {%- else -%}
 
-        {{ custom_database_name | trim }}_{{ curr_env }}
+        {{ custom_database_name | trim }}_{{ curr_env |lower }}
 
     {%- endif -%}
 
