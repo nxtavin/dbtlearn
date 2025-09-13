@@ -47,7 +47,7 @@ models:
       +schema: marts
     intermediate:
       +materialized: table
-      +schema: int
+      +schema: interm
     legacy:
       +materialized: table
       +schema: legacy
