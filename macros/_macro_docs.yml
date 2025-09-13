@@ -1,0 +1,9 @@
+macros:
+  - name: cents_to_dollars
+    arguments:
+      - name: col_name
+        description: The column in cents
+        type: string
+      - name: round
+        description: the number of decimal places to round to
+        type: int
